@@ -14,7 +14,7 @@ def FindSwappables(myNeed,myRepeated,peerNeed,peerRepeated,shinnyForShinny=True)
     if shinnyForShinny:
         needShinny = [i for i in myNeed if i in peerRepeated if i in shinny]
         giveShinny = [i for i in myRepeated if i in peerNeed if i in shinny]
-        print(len(needShinny),len(giveShinny))
+#         print(len(needShinny),len(giveShinny))
         if len(needShinny)>len(giveShinny):
             addPadding = [i for i in myRepeated if i not in giveShinny and i in shinny][:len(needShinny)-len(giveShinny)]
             giveShinny.extend(addPadding)
@@ -33,7 +33,7 @@ def FindSwappables(myNeed,myRepeated,peerNeed,peerRepeated,shinnyForShinny=True)
 
     need = [i for i in myNeed if i in peerRepeated and i not in shinny]
     give = [i for i in myRepeated if i in peerNeed and i not in shinny]
-    print(len(need),len(give))
+#     print(len(need),len(give))
 
     if len(need)>len(give):
         addPadding = [i for i in myRepeated if i not in give and i not in shinny][:len(need)-len(give)]
